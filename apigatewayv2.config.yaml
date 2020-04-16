@@ -1,7 +1,7 @@
 # API initialisation
 api_name: "Your API Name"
 protocol_type: "HTTP"
-# deployment_stagename: "test" # errors out
+# deployment_stagename: "test"
 
 # API Integration
 integration_type: AWS_PROXY
