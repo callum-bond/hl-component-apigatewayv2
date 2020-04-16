@@ -13,4 +13,3 @@ stage_name: "test"
 
 # Route  
 route_key: "ANY /path"
-  

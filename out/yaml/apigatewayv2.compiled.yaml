@@ -11,6 +11,7 @@ Resources:
     Properties:
       ApiId:
         Ref: Api
+    DependsOn: Route
   Integration:
     Type: AWS::ApiGatewayV2::Integration
     Properties:
@@ -25,12 +26,19 @@ Resources:
       ApiId:
         Ref: Api
       StageName: test
+      DeploymentId:
+        Ref: Deployment
   Route:
     Type: AWS::ApiGatewayV2::Route
     Properties:
       ApiId:
         Ref: Api
       RouteKey: ANY /path
+      Target:
+        Fn::Join:
+        - "/"
+        - - integrations
+          - Ref: Integration
 Parameters:
   EnvironmentName:
     Type: String
