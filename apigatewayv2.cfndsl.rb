@@ -10,7 +10,7 @@ CloudFormation do
   Resource('Deployment') do 
     Type('AWS::ApiGatewayV2::Deployment')
     Property('ApiId', Ref('Api'))
-    Property('StageName', deployment_stagename)
+    # Property('StageName', deployment_stagename)
   end
 
   # PayloadFormatVersion is a required parameter for integration 
@@ -33,7 +33,7 @@ CloudFormation do
   Resource('Route') do 
     Type('AWS::ApiGatewayV2::Route')
     Property('ApiId', Ref('Api'))
-    Property('RouteKey', route_key)
+    Property('RouteKey', 'ANY /path')
   end
 end
 

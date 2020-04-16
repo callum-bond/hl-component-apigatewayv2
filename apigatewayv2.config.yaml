@@ -1,16 +1,16 @@
 # API initialisation
 api_name: "Your API Name"
 protocol_type: "HTTP"
-deployment_stagename: "test_1" # errors out
+# deployment_stagename: "test" # errors out
 
 # API Integration
 integration_type: AWS_PROXY
 integration_uri: arn:aws:lambda:ap-southeast-2:580440732180:function:GetStartedLambdaProxyIntegration
-payload_version: HTTP # errors out
+payload_version: "2.0"
 
 # Stage
 stage_name: "test" 
 
 # Route  
-route_key: "$default"
+route_key: "ANY /path"
   

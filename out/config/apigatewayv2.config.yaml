@@ -1,0 +1,13 @@
+---
+api_name: Your API Name
+protocol_type: HTTP
+integration_type: AWS_PROXY
+integration_uri: arn:aws:lambda:ap-southeast-2:580440732180:function:GetStartedLambdaProxyIntegration
+payload_version: '2.0'
+stage_name: test
+route_key: ANY /path
+component_version: latest
+component_name: apigatewayv2
+template_name: apigatewayv2
+template_version: latest
+description: apigatewayv2 - latest
